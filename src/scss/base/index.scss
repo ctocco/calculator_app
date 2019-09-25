@@ -1,0 +1,54 @@
+@import "typography";
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+p {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $font-weight-normal;
+  line-height: 1.15;
+  margin: 0;
+}
+
+h1 {
+  font-size: $font-size-xxl;
+}
+
+h2 {
+  font-size: $font-size-xl;
+}
+
+h3 {
+  font-size: $font-size-lg;
+}
+
+h4 {
+  font-size: $font-size-md;
+}
+
+h5 {
+  font-size: $font-size-sm-md;
+}
+
