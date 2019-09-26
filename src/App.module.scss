@@ -1,8 +1,13 @@
 @import "./scss/base/index.scss";
 
-.appBackground {
+.calculator {
   border-radius: 5px;
   background-color: whitesmoke;
-  width: 50vw;
-  height: 70vh;
+  width: 270px;
+  height: 435px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 25% auto;
+  padding: 10px;
 }
+
