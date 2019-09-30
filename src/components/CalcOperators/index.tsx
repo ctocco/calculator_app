@@ -1,4 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
+import { useDispatch } from "react-redux";
+import { update_display } from "../../redux/actionsCreators";
 import styles from "./operators.module.scss";
 
 interface Operator {
@@ -7,14 +9,14 @@ interface Operator {
 }
 
 const CalcOperator: FunctionComponent<Operator> = ({
-  operator,
-  addStringOfOperator
+  operator
 }): JSX.Element => {
+  const dispatch = useDispatch();
   return (
     <div>
       <button
         onClick={(): void => {
-          addStringOfOperator(operator);
+          dispatch(update_display(operator));
         }}
       >
         {operator}

@@ -1,12 +1,13 @@
-const displayRedcuer = (state = 0, action) => {
+const displayReducer = (state = [], action) => {
+  console.log(state);
   switch (action.type) {
-    case "INCREMENT":
-      return state + action.payload;
-    case "DECREMENT":
-      return state - 1;
+    case "UPDATE_DISPLAY":
+      return [...state, action.payload];
+    case "SHOW_SUM":
+      return state;
     default:
       return state;
   }
 };
 
-export default displayRedcuer;
+export default displayReducer;
