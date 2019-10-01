@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import styles from "./numbers.module.scss";
-import { useDispatch } from "react-redux";
-import { update_display } from "../../redux/actionsCreators";
+import { useDispatch, useSelector } from "react-redux";
+import { input_operand } from "../../redux/actionsCreators";
 
 export interface Number {
   readonly number: string;
@@ -13,7 +13,7 @@ const CalcNumbers: FunctionComponent<Number> = ({ number }): JSX.Element => {
 
   return (
     <div className={styles[`calculatorBody_${number}`]}>
-      <button onClick={(): void => dispatch(update_display(number))}>
+      <button onClick={(): void => dispatch(input_operand(number))}>
         {number}
       </button>
     </div>

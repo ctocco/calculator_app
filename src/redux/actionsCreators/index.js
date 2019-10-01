@@ -1,7 +1,13 @@
-export function update_display(numbers_operators) {
+export function input_operand(numbers_operators) {
   return {
-    type: "UPDATE_DISPLAY",
+    type: "INPUT_OPERAND",
     payload: numbers_operators
+  };
+}
+
+export function clear_display(numbers_operators) {
+  return {
+    type: "CLEAR_DISPLAY"
   };
 }
 
