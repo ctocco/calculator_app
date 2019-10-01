@@ -3,7 +3,7 @@ import styles from "./App.module.scss";
 import CalculatorBody from "./CalculatorBody";
 import CalculatorDisplay from "./CalculatorDisplay";
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className={styles.calculator}>
       <CalculatorDisplay />

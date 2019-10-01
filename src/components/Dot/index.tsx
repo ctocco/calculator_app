@@ -1,19 +1,22 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { update_display } from "../../redux/actionsCreators";
+import React, { FunctionComponent } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { input_dot } from "../../redux/actionsCreators";
 
-export interface Clear {
+export interface Dot {
   dot: string;
 }
 
-const Clear: FunctionComponent<Clear> = ({ dot }): JSX.Element => {
+const Dot: FunctionComponent<Dot> = ({ dot }): JSX.Element => {
   const dispatch = useDispatch();
+  const display = useSelector((state: object) => state.display.hasDot);
 
   return (
-    <div>
-      <button onClick={(): void => dispatch(update_display(dot))}>{dot}</button>
+    <div className={dot}>
+      <button onClick={!display ? (): void => dispatch(input_dot(dot)) : null}>
+        {dot}
+      </button>
     </div>
   );
 };
 
-export default Clear;
+export default Dot;

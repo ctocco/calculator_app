@@ -4,17 +4,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { input_operand } from "../../redux/actionsCreators";
 
 export interface Number {
-  readonly number: string;
-  addStringOfNumber: string;
+  readonly CalculatorNumber: string;
 }
 
-const CalcNumbers: FunctionComponent<Number> = ({ number }): JSX.Element => {
+const CalcNumbers: FunctionComponent<Number> = ({
+  CalculatorNumber
+}): JSX.Element => {
   const dispatch = useDispatch();
 
   return (
-    <div className={styles[`calculatorBody_${number}`]}>
-      <button onClick={(): void => dispatch(input_operand(number))}>
-        {number}
+    <div className={styles[`calculatorBody_${CalculatorNumber}`]}>
+      <button onClick={(): void => dispatch(input_operand(CalculatorNumber))}>
+        {CalculatorNumber}
       </button>
     </div>
   );

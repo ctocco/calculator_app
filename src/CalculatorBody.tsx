@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from "react";
 import CalcNumbers from "./components/CalcNumbers";
 import CalcOperators from "./components/CalcOperators";
 import Clear from "./components/Clear";
+import Dot from "./components/Dot";
 import styles from "./CalculatorBody.module.scss";
 
 import uuid from "uuid/v1";
@@ -24,11 +25,12 @@ const CalculatorBody: FunctionComponent<any> = (): JSX.Element => {
         <Clear clear={clear} />
         {calculatorNumbers.map(CalculatorNumber => (
           <CalcNumbers
-            number={CalculatorNumber}
+            CalculatorNumber={CalculatorNumber}
             // addStringOfNumber={addStringOfNumber}
             key={uuid()}
           />
         ))}
+        <Dot dot={dot} />
       </div>
       <div className={styles.calculatorBody_operators}>
         {calculatorOperators.map(CalculatorOperator => (

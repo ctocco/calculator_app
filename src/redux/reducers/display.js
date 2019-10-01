@@ -2,7 +2,8 @@ const INITIAL_STATE = {
   initialValue: [],
   firstOperand: null,
   waitingForSecondOperand: false,
-  operator: ""
+  operator: "",
+  hasDot: false
 };
 
 const displayReducer = (state = INITIAL_STATE, action) => {
@@ -12,12 +13,20 @@ const displayReducer = (state = INITIAL_STATE, action) => {
         ...state,
         initialValue: [...state.initialValue, action.payload]
       };
-    case: "INPUT_OPERATOR" {
+    case "INPUT_OPERATOR":
       return {
-        ...state, 
-        firstOperand: initialValue
-      }
-    }
+        ...state,
+        firstOperand: state.initialValue,
+        waitingForSecondOperand: true,
+        operator: action.payload,
+        hasDot: false
+      };
+    case "INPUT_DOT":
+      return {
+        ...state,
+        initialValue: [...state.initialValue, action.payload],
+        hasDot: true
+      };
     case "CLEAR_DISPLAY":
       return INITIAL_STATE;
     case "SHOW_SUM":

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { input_operand } from "../../redux/actionsCreators";
+import { input_operator } from "../../redux/actionsCreators";
 import styles from "./operators.module.scss";
 
 interface Operators {
@@ -16,7 +16,7 @@ const CalcOperator: FunctionComponent<Operators> = ({
     <div>
       <button
         onClick={(): void => {
-          dispatch(input_operand(operator));
+          dispatch(input_operator(operator));
         }}
       >
         {operator}
