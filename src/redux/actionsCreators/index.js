@@ -6,6 +6,8 @@ import {
   SHOW_SUM
 } from "../actionTypes";
 
+// in the future make the functions camelCase
+
 export function input_operand(numbers_operators) {
   return {
     type: INPUT_OPERAND,
