@@ -12,7 +12,12 @@ const Clear: FunctionComponent<Clear> = ({ clear }): JSX.Element => {
 
   return (
     <div className={styles.clear}>
-      <button onClick={(): void => dispatch(clear_display())}>{clear}</button>
+      <button
+        className={styles.clear_button}
+        onClick={(): void => dispatch(clear_display())}
+      >
+        {clear}
+      </button>
     </div>
   );
 };

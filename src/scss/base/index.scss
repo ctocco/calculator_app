@@ -1,6 +1,7 @@
 @import "typography";
 @import "reset";
 @import "colors";
+@import "variables";
 
 html {
   box-sizing: border-box;
@@ -10,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  background: #F2DFD8;
+  background: #FCFFFE;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,4 +54,5 @@ h4 {
 h5 {
   font-size: $font-size-sm-md;
 }
+
 

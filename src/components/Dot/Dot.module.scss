@@ -1,5 +1,11 @@
+@import "../../scss/base/index.scss";
+
 .dot {
-  border: 1px blue solid;
   grid-column-start: 3;
   grid-column-end: 4;
+  background: #F3FFEE;
+  border-left: $calculator_border;
+  border-bottom: $calculator_border;
+  display: flex;
+  justify-content: center;
 }

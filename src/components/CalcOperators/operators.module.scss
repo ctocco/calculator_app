@@ -1,0 +1,16 @@
+@import "../../scss/base/index.scss";
+
+.operator {
+  text-align: center;
+  background:#FFECCF;
+  border-left: $calculator_border;
+  border-right: $calculator_border;
+  border-bottom: $calculator_border;
+  display: flex;
+  justify-content: center;
+}
+
+.operator_function {
+
+  width: 100%;
+}

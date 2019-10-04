@@ -13,8 +13,9 @@ const CalcOperator: FunctionComponent<Operators> = ({
 }): JSX.Element => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className={styles.operator}>
       <button
+        className={styles.operator_function}
         onClick={(): void => {
           dispatch(input_operator(operator));
         }}

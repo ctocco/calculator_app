@@ -1,13 +1,13 @@
 @import "./scss/base/index.scss";
 
 .calculator {
-  border-radius: 5px;
-  background-color: #262118;
-  width: 270px;
-  height: 435px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 240px;
+  height: 380px;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 25% auto;
-  padding: 10px;
+  grid-template-rows: 80px auto;
+  box-shadow: 3px 3px 5px 6px #ccc
 }
 
