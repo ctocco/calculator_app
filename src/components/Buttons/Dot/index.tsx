@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { input_dot } from "../../redux/actionsCreators";
+import { input_dot } from "../../../redux/actionsCreators";
 import styles from "./Dot.module.scss";
 
 export interface Dot {

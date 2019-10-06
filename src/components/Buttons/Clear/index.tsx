@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { clear_display } from "../../redux/actionsCreators";
+import { clear_display } from "../../../redux/actionsCreators";
 import styles from "./Clear.module.scss";
 
 export interface Clear {

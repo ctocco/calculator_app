@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import styles from "./numbers.module.scss";
 import { useDispatch } from "react-redux";
-import { input_operand } from "../../redux/actionsCreators";
+import { input_operand } from "../../../redux/actionsCreators";
 
 export interface Number {
   readonly CalculatorNumber: string;

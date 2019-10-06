@@ -1,16 +1,15 @@
 import React, { FunctionComponent, useState } from "react";
-import { useDispatch } from "react-redux";
-import { input_operator } from "../../redux/actionsCreators";
+import { useDispatch, useSelector } from "react-redux";
+import { input_operator } from "../../../redux/actionsCreators";
 import styles from "./operators.module.scss";
 
 interface Operators {
   readonly operator: string;
-  addStringOfOperator(operator: string): void;
 }
-
 const CalcOperator: FunctionComponent<Operators> = ({
   operator
 }): JSX.Element => {
+  const display: string[] = useSelector((state: object) => state.display);
   const dispatch = useDispatch();
   return (
     <div className={styles.operator}>
