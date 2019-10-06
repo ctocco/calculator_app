@@ -16,7 +16,7 @@ const CalcNumbers: FunctionComponent<Number> = ({
     <div className={styles[`calculatorBody_${CalculatorNumber}`]}>
       <button
         className=""
-        onClick={(): void => dispatch(input_operand(CalculatorNumber))}
+        onClick={() => dispatch(input_operand(CalculatorNumber))}
       >
         {CalculatorNumber}
       </button>

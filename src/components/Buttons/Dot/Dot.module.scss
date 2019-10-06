@@ -3,9 +3,14 @@
 .dot {
   grid-column-start: 3;
   grid-column-end: 4;
-  background: #F3FFEE;
+  background: #f3ffee;
   border-left: $calculator_border;
   border-bottom: $calculator_border;
   display: flex;
   justify-content: center;
+}
+
+.dot_button {
+  width: 100%;
+  height: 100%;
 }

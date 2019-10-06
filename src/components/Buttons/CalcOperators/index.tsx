@@ -9,7 +9,7 @@ interface Operators {
 const CalcOperator: FunctionComponent<Operators> = ({
   operator
 }): JSX.Element => {
-  const display: string[] = useSelector((state: object) => state.display);
+  const display = useSelector(state => state);
   const dispatch = useDispatch();
   return (
     <div className={styles.operator}>

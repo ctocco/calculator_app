@@ -8,7 +8,8 @@ import styles from "./CalculatorBody.module.scss";
 import uuid from "uuid/v1";
 
 import { numbers, operators, clear, dot } from "../../helpers/hardCodedValues";
-const CalculatorBody: FunctionComponent<any> = (): JSX.Element => {
+
+const CalculatorBody = () => {
   //UI
   const [calculatorNumbers, setCalculatorNumbers] = useState([]);
   const [calculatorOperators, setCalculatorOperators] = useState([]);

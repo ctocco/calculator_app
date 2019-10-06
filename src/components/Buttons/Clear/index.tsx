@@ -14,7 +14,7 @@ const Clear: FunctionComponent<Clear> = ({ clear }): JSX.Element => {
     <div className={styles.clear}>
       <button
         className={styles.clear_button}
-        onClick={(): void => dispatch(clear_display())}
+        onClick={() => dispatch(clear_display())}
       >
         {clear}
       </button>

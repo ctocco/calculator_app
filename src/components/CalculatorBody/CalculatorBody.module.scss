@@ -8,15 +8,15 @@
 }
 
 .calculatorBody_numbers {
-  background: #4B5936;
+  background: #4b5936;
   display: grid;
-  grid-template-rows: repeat(5, auto); 
+  grid-template-rows: repeat(5, auto);
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .calculatorBody_operators {
-  background: #4B5936;
+  background: #4b5936;
   display: grid;
-  grid-template-rows: repeat(5, auto); 
+  grid-template-rows: repeat(5, auto);
   grid-template-columns: 100%;
 }
