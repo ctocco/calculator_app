@@ -2,8 +2,7 @@ import {
   INPUT_OPERAND,
   INPUT_OPERATOR,
   INPUT_DOT,
-  CLEAR_DISPLAY,
-  SHOW_SUM
+  CLEAR_DISPLAY
 } from "../actionTypes";
 
 // in the future make the functions camelCase
@@ -29,15 +28,14 @@ export function input_dot(dot) {
   };
 }
 
-export function clear_display(numbers_operators) {
+export function clear_display() {
   return {
     type: CLEAR_DISPLAY
   };
 }
 
-export function sum_total(sum_total) {
+export function displayNumbers() {
   return {
-    type: SHOW_SUM,
-    payload: sum_total
+    type: "DISPLAY"
   };
 }
