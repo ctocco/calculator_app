@@ -3,6 +3,7 @@ const INITIAL_STATE = {
   previousOperand: 0,
   operation: "",
   display: "",
+  sum: null,
   hasDot: false
 };
 
@@ -29,15 +30,23 @@ const displayReducer = (state = INITIAL_STATE, action) => {
       };
     case "CLEAR_DISPLAY":
       return INITIAL_STATE;
+    case "SUM":
+      return {
+        ...state,
+        sum: action.payload
+      };
     case "SHOW_SUM":
       return {
         ...state,
-        secondOperand: state.currentOperand
+        display: state.sum,
+        currentOperand: "",
+        previousOperand: 0,
+        operation: ""
       };
     case "DISPLAY":
       return {
         ...state,
-        display: state.currentOperand
+        display: state.sum ? action.payload : state.currentOperand
       };
     default:
       return state;

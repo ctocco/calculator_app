@@ -34,8 +34,25 @@ export function clear_display() {
   };
 }
 
-export function displayNumbers() {
+export function displayNumbers(showNumbers) {
   return {
-    type: "DISPLAY"
+    type: "DISPLAY",
+    payload: showNumbers
+  };
+}
+
+export function sum(total) {
+  console.log("sum");
+  return {
+    type: "SUM",
+    payload: total
+  };
+}
+
+export function show_sum(totalValue) {
+  console.log("show_sum");
+  return {
+    type: "SHOW_SUM",
+    payload: totalValue
   };
 }

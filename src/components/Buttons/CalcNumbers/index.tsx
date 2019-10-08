@@ -14,7 +14,7 @@ const CalcNumbers: FunctionComponent<Number> = ({
 
   const operandActions = () => {
     dispatch(input_operand(CalculatorNumber));
-    dispatch(displayNumbers());
+    dispatch(displayNumbers(CalculatorNumber));
   };
 
   return (
