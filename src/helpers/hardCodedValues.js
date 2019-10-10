@@ -1,9 +1,9 @@
-const numbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"];
+const Numbers = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"];
 
-const operators = ["/", "*", "-", "+", "="];
+const Operators = ["/", "*", "-", "+", "="];
 
-const clear = "C";
+const ClearString = "C";
 
-const dot = ".";
+const DotString = ".";
 
-export { numbers, operators, clear, dot };
+export { Numbers, Operators, ClearString, DotString };

@@ -7,7 +7,12 @@ import styles from "./CalculatorBody.module.scss";
 
 import uuid from "uuid/v1";
 
-import { numbers, operators, clear, dot } from "../../helpers/hardCodedValues";
+import {
+  Numbers,
+  Operators,
+  ClearString,
+  DotString
+} from "../../helpers/hardCodedValues";
 
 const CalculatorBody = () => {
   //UI
@@ -16,30 +21,22 @@ const CalculatorBody = () => {
 
   // set intial values for calculator UI
   useEffect(() => {
-    setCalculatorNumbers(numbers);
-    setCalculatorOperators(operators);
+    setCalculatorNumbers(Numbers);
+    setCalculatorOperators(Operators);
   }, []);
 
   return (
     <section className={styles.calculatorBody}>
       <div className={styles.calculatorBody_numbers}>
-        <Clear clear={clear} />
+        <Clear clear={ClearString} />
         {calculatorNumbers.map(CalculatorNumber => (
-          <CalcNumbers
-            CalculatorNumber={CalculatorNumber}
-            // addStringOfNumber={addStringOfNumber}
-            key={uuid()}
-          />
+          <CalcNumbers CalculatorNumber={CalculatorNumber} key={uuid()} />
         ))}
-        <Dot dot={dot} />
+        <Dot dot={DotString} />
       </div>
       <div className={styles.calculatorBody_operators}>
         {calculatorOperators.map(CalculatorOperator => (
-          <CalcOperators
-            operator={CalculatorOperator}
-            // addStringOfOperator={addStringOfOperator}
-            key={uuid()}
-          />
+          <CalcOperators operator={CalculatorOperator} key={uuid()} />
         ))}
       </div>
     </section>
