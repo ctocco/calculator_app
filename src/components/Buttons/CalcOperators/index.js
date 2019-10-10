@@ -13,7 +13,12 @@ const CalcOperator = ({ operator }) => {
     dispatch(input_operator(operator));
     let current = parseFloat(display.currentOperand.join(""));
     let previous = parseFloat(display.previousOperand);
-    let sumValue = null;
+    // const performCalculation = {
+    //   "+" :  (firstOperand, secondOperand) => previous / secondOperand,
+    //   "-" :  (firstOperand, secondOperand) => firstOperand / secondOperand,
+    //   "/" :  (firstOperand, secondOperand) => firstOperand / secondOperand,
+    //   "*" :  (firstOperand, secondOperand) => firstOperand / secondOperand,
+    // }
     if (display.operation === "+")
       sumValue = parseFloat(previous) + parseFloat(current);
     if (display.operation === "-")
