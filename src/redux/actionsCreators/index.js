@@ -34,25 +34,16 @@ export function clear_display() {
   };
 }
 
-export function displayNumbers(showNumbers) {
+export function store_firstOperand(inputValue) {
   return {
-    type: "DISPLAY",
-    payload: showNumbers
+    type: "STORE_FIRSTOPERAND",
+    payload: inputValue
   };
 }
 
-export function sum(total) {
-  console.log("sum");
+export function next_displayValue(nextInput_value) {
   return {
-    type: "SUM",
-    payload: total
-  };
-}
-
-export function show_sum(totalValue) {
-  console.log("show_sum");
-  return {
-    type: "SHOW_SUM",
-    payload: totalValue
+    type: "STORE_NEXT_VALUE",
+    payload: nextInput_value
   };
 }

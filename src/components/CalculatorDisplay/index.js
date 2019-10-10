@@ -4,10 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { sum_total } from "../../redux/actionsCreators";
 
 const CalculatorDisplay = () => {
-  const display = useSelector(state => state.display.display);
+  const calculator = useSelector(state => state.display);
 
   return (
-    <div className={styles.calculator_display}>{!display ? "0" : display}</div>
+    <div className={styles.calculator_display}>
+      {!calculator.displayValue ? "0" : calculator.displayValue}
+    </div>
   );
 };
 

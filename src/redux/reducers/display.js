@@ -1,10 +1,8 @@
 const INITIAL_STATE = {
-  currentOperand: "",
-  previousOperand: 0,
-  operation: "",
-  display: "",
-  sum: null,
-  hasDot: false
+  displayValue: "",
+  firstOperand: null,
+  operation: null,
+  waitingForSecondOperand: false
 };
 
 const displayReducer = (state = INITIAL_STATE, action) => {
@@ -12,41 +10,31 @@ const displayReducer = (state = INITIAL_STATE, action) => {
     case "INPUT_OPERAND":
       return {
         ...state,
-        currentOperand: [...state.currentOperand, action.payload]
+        displayValue: state.displayValue + action.payload
       };
     case "INPUT_OPERATOR":
       return {
         ...state,
-        currentOperand: [],
-        previousOperand: parseInt(state.currentOperand.join(""), 10),
         operation: action.payload,
-        hasDot: false
+        waitingForSecondOperand: true
       };
     case "INPUT_DOT":
       return {
         ...state,
-        currentOperand: [...state.currentOperand, action.payload],
-        hasDot: true
+        displayValue: state.displayValue + action.payload
       };
     case "CLEAR_DISPLAY":
       return INITIAL_STATE;
-    case "SUM":
+    case "STORE_FIRSTOPERAND":
       return {
         ...state,
-        sum: action.payload
+        firstOperand: action.payload
       };
-    case "SHOW_SUM":
+    case "STORE_NEXT_VALUE":
       return {
         ...state,
-        display: state.sum,
-        currentOperand: "",
-        previousOperand: 0,
-        operation: ""
-      };
-    case "DISPLAY":
-      return {
-        ...state,
-        display: state.sum ? action.payload : state.currentOperand
+        displayValue: action.payload,
+        waitingForSecondOperand: false
       };
     default:
       return state;

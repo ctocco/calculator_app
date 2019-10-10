@@ -5,14 +5,16 @@ import styles from "./Dot.module.scss";
 
 const Dot = ({ dot }) => {
   const dispatch = useDispatch();
-  const display = useSelector(state => state.display.hasDot);
+  const calculator = useSelector(state => state.display);
+
+  const addDot = () => {
+    if (calculator.display.includes(".")) return;
+    dispatch(input_dot(dot));
+  };
 
   return (
     <div className={styles.dot}>
-      <button
-        className={styles.dot_button}
-        onClick={!display ? () => dispatch(input_dot(dot)) : null}
-      >
+      <button className={styles.dot_button} onClick={addDot}>
         {dot}
       </button>
     </div>
