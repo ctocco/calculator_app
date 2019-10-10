@@ -47,3 +47,10 @@ export function next_displayValue(nextInput_value) {
     payload: nextInput_value
   };
 }
+
+export function show_result(result) {
+  return {
+    type: "SHOW_RESULT",
+    payload: result
+  };
+}

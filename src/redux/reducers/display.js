@@ -36,6 +36,12 @@ const displayReducer = (state = INITIAL_STATE, action) => {
         displayValue: action.payload,
         waitingForSecondOperand: false
       };
+    case "SHOW_RESULT":
+      return {
+        ...state,
+        displayValue: String(action.payload),
+        firstOperand: action.payload
+      };
     default:
       return state;
   }
