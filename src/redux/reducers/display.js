@@ -23,8 +23,6 @@ const displayReducer = (state = INITIAL_STATE, action) => {
         ...state,
         displayValue: state.displayValue + action.payload
       };
-    case "CLEAR_DISPLAY":
-      return INITIAL_STATE;
     case "STORE_FIRSTOPERAND":
       return {
         ...state,
@@ -42,6 +40,8 @@ const displayReducer = (state = INITIAL_STATE, action) => {
         displayValue: String(action.payload),
         firstOperand: action.payload
       };
+    case "CLEAR_DISPLAY":
+      return INITIAL_STATE;
     default:
       return state;
   }

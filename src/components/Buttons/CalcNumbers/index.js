@@ -11,7 +11,6 @@ const CalcNumbers = ({ CalculatorNumber }) => {
   const dispatch = useDispatch();
 
   const operandActions = () => {
-    console.log(waitingForSecondOperand);
     if (waitingForSecondOperand === true) {
       dispatch(next_displayValue(CalculatorNumber));
     } else {
