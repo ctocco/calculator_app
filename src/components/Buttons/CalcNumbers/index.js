@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styles from "./numbers.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -7,9 +7,7 @@ import {
 } from "../../../redux/actionsCreators";
 
 const CalcNumbers = ({ CalculatorNumber }) => {
-  const { displayValue, waitingForSecondOperand } = useSelector(
-    state => state.display
-  );
+  const { waitingForSecondOperand } = useSelector(state => state.display);
   const dispatch = useDispatch();
 
   const operandActions = () => {

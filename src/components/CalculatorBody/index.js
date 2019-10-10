@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import CalcNumbers from "../Buttons/CalcNumbers";
 import CalcOperators from "../Buttons/CalcOperators";
 import Clear from "../Buttons/Clear";

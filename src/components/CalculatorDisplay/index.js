@@ -1,7 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import styles from "./CalculatorDisplay.module.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { sum_total } from "../../redux/actionsCreators";
+import { useSelector } from "react-redux";
 
 const CalculatorDisplay = () => {
   const calculator = useSelector(state => state.display);

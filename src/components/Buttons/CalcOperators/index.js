@@ -23,7 +23,6 @@ const CalcOperator = ({ operator }) => {
       const result = performCalculation[operation](firstOperand, inputValue);
       dispatch(show_result(result));
     }
-
     dispatch(input_operator(operator));
   };
 
