@@ -1,11 +1,15 @@
 @import "../../scss/base/index.scss";
 
 .calculator_display {
-  background:#F5FFFF;
+  background: #f5ffff;
   border: $calculator_border;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-family: $font-family-calculator;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-xl;
 }
