@@ -8,7 +8,7 @@ const Dot = ({ dot }) => {
   const calculator = useSelector(state => state.display);
 
   const addDot = () => {
-    if (calculator.display.includes(".")) return;
+    if (calculator.displayValue.includes(".")) return;
     dispatch(input_dot(dot));
   };
 

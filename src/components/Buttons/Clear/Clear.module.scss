@@ -10,9 +10,16 @@
 
 .clear_button {
   text-align: center;
-  background: #E5F3FD;
+  background: #e5f3fd;
   width: 100%;
   height: 100%;
   border-left: $calculator_border;
   border-bottom: $calculator_border;
+  font-family: $font-family-calculator;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-lg;
+}
+
+.clear_button:hover {
+  background: #92d0fc;
 }
