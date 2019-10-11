@@ -2,7 +2,7 @@
 
 .operator {
   text-align: center;
-  background:#FFECCF;
+  background: #ffeccf;
   border-left: $calculator_border;
   border-right: $calculator_border;
   border-bottom: $calculator_border;
@@ -10,7 +10,13 @@
   justify-content: center;
 }
 
-.operator_function {
-
+.operator_button {
   width: 100%;
+  font-family: $font-family-calculator;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-lg;
+}
+
+.operator:hover {
+  background: #ffcc80;
 }

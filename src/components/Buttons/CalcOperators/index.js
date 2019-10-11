@@ -36,7 +36,7 @@ const CalcOperator = ({ operator }) => {
 
   return (
     <div className={styles.operator}>
-      <button className={styles.operator_function} onClick={handleOperator}>
+      <button className={styles.operator_button} onClick={handleOperator}>
         {operator}
       </button>
     </div>
