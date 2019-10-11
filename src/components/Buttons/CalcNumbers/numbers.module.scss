@@ -7,33 +7,47 @@
   justify-content: center;
   button {
     text-align: center;
-    background: #E2FEF6;
+    background: #e2fef6;
     width: 100%;
     height: 100%;
     align-items: center;
     border-left: $calculator_border;
     border-bottom: $calculator_border;
   }
- }
+}
 
- $numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9;
+$numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9;
 
- @each $number in $numbers {
-   .calculatorBody_#{$number} {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     button {
-      background: #E2FEF6;
+@each $number in $numbers {
+  .calculatorBody_#{$number} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: #e2fef6;
       width: 100%;
       height: 100%;
       border-bottom: $calculator_border;
       border-left: $calculator_border;
-     }
-   }
- }
+    }
+    button:hover {
+      background: #9becd5;
+    }
+  }
+}
 
 .calculatorBody_button {
   background: blue !important;
   width: 100%;
+}
+
+.calculatorBody_button:hover {
+  background: yellow;
+}
+
+.calculatorBody_numbers {
+  font-family: $font-family-calculator;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-lg;
 }

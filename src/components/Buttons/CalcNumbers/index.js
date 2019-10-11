@@ -20,7 +20,10 @@ const CalcNumbers = ({ CalculatorNumber }) => {
 
   return (
     <div className={styles[`calculatorBody_${CalculatorNumber}`]}>
-      <button className="" onClick={operandActions}>
+      <button
+        className={styles.calculatorBody_numbers}
+        onClick={operandActions}
+      >
         {CalculatorNumber}
       </button>
     </div>
