@@ -2,17 +2,33 @@
     Base
 ======================= */
 
-$primary-color: #e4b660;
 $clear-color: #e5f3fd;
 $operator-color: #ffeccf;
 $operand-color: #e2fef6;
+$dot-color: #f3ffee;
 
-// B&W
+/* =======================
+    Hover
+======================= */
 
-$black: rgb(5, 5, 5);
-$white: #f5f5f5;
+$primary-hover-color: #e4b660;
+$clear-hover-color: #e5f3fd;
+$operator-hover-color: #ffeccf;
+$operand-hover-color: #9becd5;
+$dot-hover-color: #dfffd1;
+
+/* =======================
+    Black & White
+======================= */
+
+$black: #2d3033;
+$white: #fcfffe;
 $dark: #22222c;
 $light-grey: #a2a7b6;
 $dark-grey: #3c3444;
 
-$radio-text-color: #a2a7b6;
+/* =======================
+    Text
+======================= */
+
+$calculator-text-color: #2d3033;

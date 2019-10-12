@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  background: #FCFFFE;
+  background: $white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,5 +54,3 @@ h4 {
 h5 {
   font-size: $font-size-sm-md;
 }
-
-
