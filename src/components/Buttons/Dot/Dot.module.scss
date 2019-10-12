@@ -3,17 +3,21 @@
 .dot {
   grid-column-start: 3;
   grid-column-end: 4;
-  background: #f3ffee;
   border-left: $calculator_border;
   border-bottom: $calculator_border;
   display: flex;
   justify-content: center;
+  button:hover {
+    background: $dot-hover-color;
+  }
 }
 
 .dot_button {
   width: 100%;
   height: 100%;
+  background: $dot-color;
   font-family: $font-family-calculator;
   font-weight: $font-weight-normal;
   font-size: $font-size-lg;
+  color: $calculator-text-color;
 }

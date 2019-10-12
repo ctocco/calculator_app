@@ -1,5 +1,12 @@
 @import "../../../scss/base/index.scss";
 
+.calculatorBody_numbers {
+  font-family: $font-family-calculator;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-lg;
+  color: $calculator-text-color;
+}
+
 .calculatorBody_0 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -7,12 +14,15 @@
   justify-content: center;
   button {
     text-align: center;
-    background: #e2fef6;
+    background: $operand-color;
     width: 100%;
     height: 100%;
     align-items: center;
     border-left: $calculator_border;
     border-bottom: $calculator_border;
+  }
+  button:hover {
+    background: $operand-hover-color;
   }
 }
 
@@ -25,29 +35,14 @@ $numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9;
     align-items: center;
 
     button {
-      background: #e2fef6;
+      background: $operand_color;
       width: 100%;
       height: 100%;
       border-bottom: $calculator_border;
       border-left: $calculator_border;
     }
     button:hover {
-      background: #9becd5;
+      background: $operand-hover-color;
     }
   }
-}
-
-.calculatorBody_button {
-  background: blue !important;
-  width: 100%;
-}
-
-.calculatorBody_button:hover {
-  background: yellow;
-}
-
-.calculatorBody_numbers {
-  font-family: $font-family-calculator;
-  font-weight: $font-weight-normal;
-  font-size: $font-size-lg;
 }
