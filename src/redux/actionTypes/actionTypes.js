@@ -2,4 +2,6 @@ export const INPUT_OPERAND = "INPUT_OPERAND";
 export const INPUT_OPERATOR = "INPUT_OPERATOR";
 export const INPUT_DOT = "INPUT_DOT";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY";
-export const SHOW_SUM = "SHOW_SUM";
+export const STORE_FIRSTOPERAND = "STORE_FIRSTOPERAND";
+export const STORE_NEXT_VALUE = "STORE_NEXT_VALUE";
+export const SHOW_RESULT = "SHOW_RESULT";
