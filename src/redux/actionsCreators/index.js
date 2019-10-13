@@ -2,8 +2,11 @@ import {
   INPUT_OPERAND,
   INPUT_OPERATOR,
   INPUT_DOT,
-  CLEAR_DISPLAY
-} from "../actionTypes";
+  CLEAR_DISPLAY,
+  STORE_FIRSTOPERAND,
+  STORE_NEXT_VALUE,
+  SHOW_RESULT
+} from "../actionTypes/actionTypes";
 
 // in the future make the functions camelCase
 
@@ -36,21 +39,21 @@ export function clear_display() {
 
 export function store_firstOperand(inputValue) {
   return {
-    type: "STORE_FIRSTOPERAND",
+    type: STORE_FIRSTOPERAND,
     payload: inputValue
   };
 }
 
 export function next_displayValue(nextInput_value) {
   return {
-    type: "STORE_NEXT_VALUE",
+    type: STORE_NEXT_VALUE,
     payload: nextInput_value
   };
 }
 
 export function show_result(result) {
   return {
-    type: "SHOW_RESULT",
+    type: SHOW_RESULT,
     payload: result
   };
 }
