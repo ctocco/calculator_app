@@ -1,13 +1,22 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styles from "./numbers.module.scss";
 import { useDispatch, useSelector } from "react-redux";
+import { AppState } from "../../../redux/reducers";
 import {
   input_operand,
   next_displayValue
 } from "../../../redux/actionsCreators";
 
-const CalcNumbers = ({ CalculatorNumber }) => {
-  const { waitingForSecondOperand } = useSelector(state => state.display);
+interface calculatornumber {
+  CalculatorNumber: string;
+}
+
+const CalcNumbers: FunctionComponent<calculatornumber> = ({
+  CalculatorNumber
+}) => {
+  const { waitingForSecondOperand } = useSelector(
+    (state: AppState) => state.display
+  );
   const dispatch = useDispatch();
 
   const operandActions = () => {
