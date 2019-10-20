@@ -7,7 +7,7 @@ import {
 } from "../../../redux/actionsCreators";
 import { AppState } from "../../../redux/reducers/";
 import styles from "./operators.module.scss";
-import { performCalculation } from "../../../helpers/functions";
+import { performCalculation } from "./functions";
 
 export interface Operator {
   operator: string;
