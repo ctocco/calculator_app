@@ -7,6 +7,7 @@ import {
 } from "../../../redux/actionsCreators";
 import { AppState } from "../../../redux/reducers/";
 import styles from "./operators.module.scss";
+import { performCalculation } from "../../../helpers/functions";
 
 export interface Operator {
   operator: string;
@@ -34,18 +35,6 @@ const CalcOperator: FunctionComponent<Operator> = ({
       dispatch(show_result(result));
     }
     dispatch(input_operator(operator));
-  };
-
-  const performCalculation: any = {
-    "+": (firstOperand: number, secondOperand: number) =>
-      firstOperand + secondOperand,
-    "-": (firstOperand: number, secondOperand: number) =>
-      firstOperand - secondOperand,
-    "/": (firstOperand: number, secondOperand: number) =>
-      firstOperand / secondOperand,
-    "*": (firstOperand: number, secondOperand: number) =>
-      firstOperand * secondOperand,
-    "=": (firstOperand: void, secondOperand: number) => secondOperand
   };
 
   return (
